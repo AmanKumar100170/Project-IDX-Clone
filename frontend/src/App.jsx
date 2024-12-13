@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import { PingComponent } from './components/atoms/PingComponent'
 import './App.css'
+import { Route, Routes } from 'react-router-dom';
+import { CreateProject } from './pages/CreateProject';
 
 function App() {
 
   return (
-    <>
-      Hello
-    </>
+    <Routes>
+      <Route path="/" element={<CreateProject />} />
+    </Routes>
   )
   
 }
