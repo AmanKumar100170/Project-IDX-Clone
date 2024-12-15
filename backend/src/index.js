@@ -52,12 +52,7 @@ editorNamespace.on('connection', (socket) => {
         })
     }
 
-    handleEditorSocketEvents(socket);
-
-    // socket.on('disconnect', async () => {
-    //     await watcher.close();
-    //     console.log('Editor disconnected');
-    // })
+    handleEditorSocketEvents(socket, editorNamespace);
 
 });
 
