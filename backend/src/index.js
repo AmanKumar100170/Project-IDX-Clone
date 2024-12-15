@@ -10,6 +10,8 @@ import { createServer } from 'node:http';
 import chokidar from 'chokidar';
 import { handleEditorSocketEvents } from './socketHandlers/editorHandler.js';
 
+import { handleContainerCreate } from './containers/handleContainerCreate.js';
+
 const app = express();
 const server = createServer(app);
 const io = new Server(server, {
@@ -55,6 +57,16 @@ editorNamespace.on('connection', (socket) => {
     handleEditorSocketEvents(socket, editorNamespace);
 
 });
+
+const terminalNamespace = io.of('/terminal');
+
+terminalNamespace.on('connection', (socket) => {
+    console.log('Terminal Connected');
+
+    let projectId = socket.handshake.query['projectId'];
+    handleContainerCreate(projectId, socket);
+
+})
 
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
