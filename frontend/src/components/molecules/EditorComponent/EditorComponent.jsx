@@ -50,7 +50,6 @@ export const EditorComponent = () => {
         <>
             {   editorState.theme && 
                 <Editor 
-                    height={'100vh'}
                     width={'100%'}
                     defaultValue='// Welcome to the Playground'
                     defaultLanguage={undefined}
