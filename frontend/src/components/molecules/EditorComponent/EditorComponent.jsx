@@ -21,14 +21,14 @@ export const EditorComponent = () => {
         setEditorState({ ...editorState, theme: data });
     }
 
-    function handleEditorTheme (editor, monaco) {
-        monaco.editor.defineTheme('dracula', editorState.theme);
-        monaco.editor.setTheme('dracula');
+    function handleEditorTheme (monaco) {
+        console.log(monaco);
+        // monaco.editor.defineTheme('dracula', editorState.theme);
+        // monaco.editor.setTheme('dracula');
     }
 
     function handleChange(value){
         // Debouncing
-
         if (timerId != null){
             clearTimeout(timerId);
         }

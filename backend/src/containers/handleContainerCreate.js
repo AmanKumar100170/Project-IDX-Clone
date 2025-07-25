@@ -11,7 +11,7 @@ export const listContainer = async () => {
     })
 }
 
-export const handleContainerCreate = async (projectId, terminalSocket, req, tcpSocket, head) => {
+export const handleContainerCreate = async (projectId) => {
     console.log('Project id received for container create', projectId);
     
     try {
@@ -82,6 +82,7 @@ export async function getContainerPort (containerName){
         console.log('Container Info: ', containerInfo);
         
         try {
+            console.log(containerInfo?.NetworkSettings?.Ports['5173/tcp'][0].HostPort);
             return containerInfo?.NetworkSettings?.Ports['5173/tcp'][0].HostPort;
         } catch (error) {
             console.log('Port not present');

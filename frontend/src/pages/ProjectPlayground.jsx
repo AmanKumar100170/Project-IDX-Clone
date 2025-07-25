@@ -8,7 +8,7 @@ import { io } from "socket.io-client";
 import { BrowserTerminal } from "../components/molecules/Terminal/BrowserTerminal";
 import { useTerminalSocketStore } from "../store/terminalSocketStore";
 import { Browser } from '../components/organisms/Browser/Browser';
-import { Button, Divider } from "antd";
+import { Button } from "antd";
 import { Allotment } from "allotment";
 import 'allotment/dist/style.css';
 
@@ -82,14 +82,14 @@ export const ProjectPlayground = () => {
                             }}
                         >
 
-                        <Allotment
-                            vertical={true}
-                        >
+                            <Allotment
+                                vertical={true}
+                            >
 
-                            <EditorComponent />
-                                
-                            <BrowserTerminal />
-                        </Allotment>
+                                <EditorComponent />
+                                    
+                                <BrowserTerminal />
+                            </Allotment>
 
                         </div>
 

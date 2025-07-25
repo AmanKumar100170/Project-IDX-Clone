@@ -6,11 +6,7 @@ import { PORT } from './config/serverConfig.js';
 
 import { Server } from 'socket.io';
 import { createServer } from 'node:http';
-
-import chokidar from 'chokidar';
 import { handleEditorSocketEvents } from './socketHandlers/editorHandler.js';
-
-import { listContainer } from './containers/handleContainerCreate.js';
 
 const app = express();
 const server = createServer(app);
@@ -38,23 +34,6 @@ editorNamespace.on('connection', (socket) => {
     let projectId = socket.handshake.query['projectId'];
 
     console.log('Project id received after connection', projectId);
-
-    // if (projectId){
-    //     var watcher = chokidar.watch(`/projects/${projectId}`, {
-    //         ignored: (path) => {
-    //             return path.includes('node_modules');
-    //         },
-    //         persistent: true,
-    //         awaitWriteFinish: {
-    //             stabilityThreshold: 2000
-    //         },
-    //         ignoreInitial: true
-    //     });
-
-    //     watcher.on('all', (event, path) => {
-    //         console.log(event, path);
-    //     })
-    // }
 
     handleEditorSocketEvents(socket, editorNamespace);
 

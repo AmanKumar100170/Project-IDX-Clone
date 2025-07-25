@@ -23,7 +23,7 @@ const webSocketForTerminal = new WebSocketServer({
     server
 })
 
-webSocketForTerminal.on('connection', async (ws, req, container) => {
+webSocketForTerminal.on('connection', async (ws, req) => {
     const isTerminal = req.url.includes('/terminal');
 
     if (isTerminal){

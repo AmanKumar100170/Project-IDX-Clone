@@ -15,7 +15,7 @@ export const TreeStructure = () => {
 
     useEffect(() => {
         if (treeStructure){
-            
+            console.log('Tree structure:', treeStructure);
         }
         else {
             setTreeStructure();
