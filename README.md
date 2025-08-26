@@ -9,7 +9,6 @@ ProjectIDX is a sleek and responsive full-stack web application that enables dev
 - 🛠️ **ProjectIDX** serves as an in-browser coding environment built with React and Vite.
 - 🧑‍💻 Features a powerful **code editor**, **integrated terminal**, and **project file explorer**—just like a local IDE.
 - 🐳 Backed by **Docker-based containerization** to safely run user code in isolated environments.
-- 🌐 Real-time collaboration capabilities via **WebSockets**.
 - 🎨 Clean and responsive UI using **Ant Design** and custom CSS.
 - 🔍 Designed with a modular architecture to support multiple stacks and file structures.
 
@@ -98,3 +97,4 @@ The dynamic project structure explorer:
 - ✏️ Enhances user experience with intuitive navigation and file editing flow.
 
 ---
+
