@@ -62,7 +62,7 @@ ProjectIDX is a sleek and responsive full-stack web application that enables dev
 
 ### 🔌 Real-time Communication
 - WebSocket-based bi-directional communication between client and server.
-- Enables live terminal interactions and collaborative editing support.
+- Enables live terminal interactions.
 
 ---
 
@@ -97,4 +97,5 @@ The dynamic project structure explorer:
 - ✏️ Enhances user experience with intuitive navigation and file editing flow.
 
 ---
+
 
